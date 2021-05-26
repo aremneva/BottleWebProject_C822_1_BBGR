@@ -14,22 +14,51 @@ def home():
         year=datetime.now().year
     )
 
-@route('/contact')
-@view('contact')
-def contact():
+@route('/BFS')
+@view('BFS')
+def bfs():
     """Renders the contact page."""
     return dict(
-        title='Contact',
-        message='Your contact page.',
+        title='BFS',
+        message='Breadth-first search',
         year=datetime.now().year
     )
 
+@route('/DFS')
+@view('DFS')
+def dfs():
+    """Renders the contact page."""
+    return dict(
+        title='DFS',
+        message='Depth-first search',
+        year=datetime.now().year
+    )
+
+@route('/Kruskal')
+@view('Kruskal')
+def kruskal():
+    """Renders the contact page."""
+    return dict(
+        title='Kruskal',
+        message='Kruskal`s algorithm',
+        year=datetime.now().year
+    )
+
+@route('/Prim')
+@view('Prim')
+def prim():
+    """Renders the contact page."""
+    return dict(
+        title='Prim',
+        message='Prim`s algorithm',
+        year=datetime.now().year
+    )
 @route('/about')
 @view('about')
 def about():
     """Renders the about page."""
     return dict(
-        title='About',
-        message='Your application description page.',
+        title='About authors',
+        message='There will be information about authors of the website.',
         year=datetime.now().year
     )

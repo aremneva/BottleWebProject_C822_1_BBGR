@@ -18,13 +18,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">Application name</a>
+                <a href="/" class="navbar-brand">MathModelingSolved</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/home">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/BFS">BFS</a></li>
+                    <li><a href="/DFS">DFS</a></li>
+                    <li><a href="/Kruskal">Kruskal</a></li>
+                    <li><a href="/Prim">Prim</a></li>
+                    <li><a href="/about">About authors</a></li>
                 </ul>
             </div>
         </div>
