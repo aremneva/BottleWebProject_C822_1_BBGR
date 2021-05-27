@@ -62,3 +62,6 @@ def about():
         message='There will be information about authors of the website.',
         year=datetime.now().year
     )
+@route('/static/<filename:path>', name='static')
+def serve_stati(filename):
+    return static_file(filename, root='static')
