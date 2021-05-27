@@ -45,6 +45,9 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="make_weight.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -80,6 +83,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\layout.tpl" />
+    <Content Include="views\make_table.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\prim.tpl">
       <SubType>Code</SubType>
     </Content>

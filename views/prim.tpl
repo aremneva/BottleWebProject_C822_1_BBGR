@@ -42,47 +42,23 @@
 </div>
 
 <div class="junbotron">
+
 	<h3>  Prim's algorithm </h3>
 	<form action='/Prim' method='post'>
-		<p><textarea rows="2" cols="50" name="num" placeholder="Number of graph vertices"></textarea></p> 
-        <div>
-  <div>
-    <p>The matrix</p>
-    <form id="inputField" role="form">
-   
-    <table>
-    <tbody>
-    %for i in range(5):
-    <tr>
-     %for j in range(5):
-     <td><input type="text" name="field"+j size="3"  min="1" max="9"></td>
-     %end
-      </tr>
-    %end
-      </tbody>
-      </table>
-      <br>
-    </form>
-    <br>
+		<p><input type="Number"  name="num" value=rows placeholder="Number of graph vertices" min=1 max=99></input></p> 
+    %try:
+        % include('make_table.tpl', title='make_table', rows=rows)
+        % include('make_weight.tpl', title='make_table', rows=rows)
+    %except NameError:
+    %pass
+    %finally:
 
-    <p>The adjacency matrix</p>
-  </div>	
-  <form id="inputField" role="form">
-      <table>
-    <tbody>
-    %for i in range(5):
-    <tr>
-     %for j in range(5):
-     <td><input type="Number" name="fieldAM"+j size="3" min="1" max="9"></td>
-     %end
-      </tr>
-    %end
-      </tbody>
-      </table>
-      <br>
-    </form>
     <br>
         <p> <input type="submit"  class="button button" value="Calculate"></p>
-
+        
+    </form>
+    <form action='/Primm' method='post'>
+    <p> <input type="submit"  class="button button" value="Ok"></p>
+    </form>
 </div>
 
