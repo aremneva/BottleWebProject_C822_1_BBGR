@@ -59,7 +59,7 @@ def about():
     """Renders the about page."""
     return dict(
         title='About authors',
-        message='There will be information about authors of the website.',
+        message='As a team, we developed a website for solving mathematical modeling tasks.',
         year=datetime.now().year
     )
 @route('/static/<filename:path>', name='static')
