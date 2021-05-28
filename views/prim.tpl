@@ -45,20 +45,24 @@
 
 	<h3>  Prim's algorithm </h3>
 	<form action='/Prim' method='post'>
-		<p><input type="Number"  name="num" value=rows placeholder="Number of graph vertices" min=1 max=99></input></p> 
     %try:
+		<p><input type="Number"  name="num" value={{rows}} placeholder="Number of graph vertices" min=1 max=99></input></p> 
+        %except NameError:
+        <p><input type="Number"  name="num" placeholder="Number of graph vertices" min=1 max=99></input></p> 
+        %finally:
+        <br>
+        <p> <input type="submit"  class="button button" value="Ok"></p>
+    </form>
+    %try:
+    <form action='/Primm' method='post'>
+    <p><input type="Number"  name="num" value={{rows}} placeholder="Number of graph vertices" min=1 max=99 hidden></input></p> 
         % include('make_table.tpl', title='make_table', rows=rows)
         % include('make_weight.tpl', title='make_table', rows=rows)
-    %except NameError:
+    <p> <input type="submit"  class="button button" value="Calculate"></p>
+    </form>
+        %except NameError:
     %pass
     %finally:
 
-    <br>
-        <p> <input type="submit"  class="button button" value="Calculate"></p>
-        
-    </form>
-    <form action='/Primm' method='post'>
-    <p> <input type="submit"  class="button button" value="Ok"></p>
-    </form>
 </div>
 

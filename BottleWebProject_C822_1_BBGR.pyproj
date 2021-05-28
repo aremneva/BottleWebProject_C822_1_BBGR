@@ -48,7 +48,8 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="make_weight.tpl">
+    <Content Include="mas_weight.txt" />
+    <Content Include="views\make_weight.tpl">
       <SubType>Code</SubType>
     </Content>
     <Content Include="requirements.txt" />
