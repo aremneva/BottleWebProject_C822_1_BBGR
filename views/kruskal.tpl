@@ -22,6 +22,12 @@
 <p>-Now assume P is true for some non-final edge set F and let T be a minimum spanning tree that contains F.</p>
 <p>--If the next chosen edge e is also in T, then P is true for F + e.</p>
 <p>--Otherwise, if e is not in T then T + e has a cycle C. This cycle contains edges which do not belong to F, since e does not form a cycle when added to F but does in T. Let f be an edge which is in C but not in F + e. Note that f also belongs to T, and by P has not been considered by the algorithm. f must therefore have a weight at least as large as e. Then T - f + e is a tree, and it has the same or less weight as T. So T - f + e is a minimum spanning tree containing F + e and again P holds.</p>
+<h3>Kruskal's vs Prim's Algorithm</h3>
+<p>Prim's algorithm is another popular minimum spanning tree algorithm that uses a different logic to find the MST of a graph. Instead of starting from an edge, Prim's algorithm starts from a vertex and keeps adding lowest-weight edges which aren't in the tree, until all vertices have been covered.</p>
+<h4>Enter the required values</h4>
 <p>number of graph vertices:</p>
 <input type ="number">
-<p>matrix of weight of branches</p>
+<p>matrix of weight of branches:</p>
+<input type ="number">
+<p>Press the button</p>
+<input type ="button" value="calculate">
