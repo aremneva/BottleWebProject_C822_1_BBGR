@@ -5,7 +5,7 @@
 
 <h4>Babaeva Leda</h4>
 <img class ="image" src="{{get_url('static', filename='img/leda.jpg')}}" width=200>
-<p>My part was to develop a program that could find the shortest backbone using the Prim's algorithm. In addition, I developed technical specification. Also, Anastasia and I, using special tools, made an organizational and navigation part for the communication of the project participants</p>
+<p>My part was to develop a program that could find the shortest backbone using the Prim's algorithm. In addition, I developed Terms of reference. Also, Anastasia and I, using special tools, made an organizational and navigation part for the communication of the project participants</p>
 
 <h4>Balabkina Anastasia</h4>
 <img class ="image" src="{{get_url('static', filename='img/nastya.jpg')}}" width=200>
