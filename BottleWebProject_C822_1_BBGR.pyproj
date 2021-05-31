@@ -46,9 +46,13 @@
     <Folder Include="static\fonts\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
+    <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="mas_weight.txt" />
+    <Content Include="data\prim_data.txt" />
+    <Content Include="views\make_result.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\make_weight.tpl">
       <SubType>Code</SubType>
     </Content>
@@ -91,6 +95,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\prim.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\prim_solution.tpl">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>
