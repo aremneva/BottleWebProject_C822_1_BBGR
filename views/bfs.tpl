@@ -25,4 +25,6 @@
 <input type="text" size="5">
 <p></p>
 <p></p>
+<p></p>
+<p></p>
 <input type="button" value="Calculate">
