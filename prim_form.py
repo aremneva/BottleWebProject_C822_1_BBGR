@@ -11,12 +11,13 @@ from datetime import datetime
 def prim_form():
     return template('prim', rows=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm', year=datetime.now().year)
 
-@post('/Primm', method='post')
+@post('/Num', method='post')
 def prim_form():
     
     rows=int(request.forms.get('num'))
     #если ячейка пустая, то 0
     mas = []
+    solutions={}
     for i in range(rows):
         mas.append([0] * rows)
     for i in range(rows):
@@ -24,7 +25,7 @@ def prim_form():
             try:
                 if i!=j:
                     mas[i][j] = int(request.forms.get('field{}{}'.format(j,i)))
-                    mas[j][i] = int(request.forms.get('field{}{}'.format(j,i)))
+                    mas[j][i] = mas[i][j]
                 else:
                     mas[i][j] = 0
             except ValueError:
@@ -32,8 +33,17 @@ def prim_form():
                 mas[j][i] = 0
             finally:
                 pass
-    with open('mas_weight.txt', 'w') as file:
-        json.dump(mas, file)
+    if os.stat('data/prim_data.txt').st_size !=0: 
+        with open('data/prim_data.txt', 'r') as file:
+            solutions=json.load(file)
+            id=len(solutions)
+            file.close()
+    else:
+        id=0
+    # тут будет алгоритм решения (поменять mas в output на массив с решением)
+    with open('data/prim_data.txt', 'w') as file:
+        solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input':mas, 'output':mas}
+        json.dump(solutions, file)
     file.close()
-    return json.dumps(mas)
+    return template('prim_solution',id=id+1, rows=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm', year=datetime.now().year)
 
