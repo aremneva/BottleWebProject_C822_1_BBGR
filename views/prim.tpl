@@ -43,19 +43,20 @@
 
 <div class="junbotron">
 
-	<h3>  Prim's algorithm </h3>
+	<h3>Prim's algorithm </h3>
 	<form action='/Prim' method='post'>
+    <p>Number of graph vertices</p>
     %try:
-		<p><input type="Number"  name="num" value={{rows}} placeholder="Number of graph vertices" min=1 max=99></input></p> 
+		<p><input type="Number"  name="num" value={{rows}} placeholder="Num" min=1 max=99></input></p> 
         %except NameError:
-        <p><input type="Number"  name="num" placeholder="Number of graph vertices" min=1 max=99></input></p> 
+        <p><input type="Number"  name="num" value=5 placeholder="Num" min=1 max=99></input></p> 
         %finally:
         <br>
         <p> <input type="submit"  class="button button" value="Ok"></p>
     </form>
     %try:
     <form action='/Num' method='post'>
-    <p><input type="Number"  name="num" value={{rows}} placeholder="Number of graph vertices" min=1 max=99 hidden></input></p> 
+    <p><input type="Number"  name="num" value={{rows}} placeholder="Num" min=1 max=99 hidden></input></p>
         % include('make_weight.tpl', title='make_table', rows=rows)
     <p> <input type="submit"  class="button button" value="Calculate"></p>
     </form>
