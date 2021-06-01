@@ -22,27 +22,29 @@
 </ol>
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif" height=250></img>
 
-<h4>Find a Spanning Tree</h4>
+<!-- mine -->
 
-<form method="post"><b>Vertices amount:</b><br>
-   <input type="number" name="nodesNum" min="2" max="9"/>
-   <button>Confirm</button>
+<h4>Find a Spanning Tree</h4>
+<form action='/DFS' method="post">
+<b>Nodes amount:</b><br/>
+    %try:
+   <input type="number" name="nodesNum" min="2" max="9" value={{vertices}} placeholder="2 to 9"/>
+   %except NameError:
+        <input type="number" name="nodesNum" min="2" max="9"  placeholder="2 to 9"/>
+   %finally:
+   <input type="submit" value="Confirm" class="btn btn-default"/>
   </form>
 
-
-
-%try:
-%include('table.tpl', rows=rows)
-
-<table>
-%from bottle import post, request
-%nodesNum = 4
-
-%for i in range(3):
-<tr>
-%for j in range (3):
-<td><input type="number" name="f"+i+j size="2" min="1" max="{{nodesNum}}"></td>
-%end
-</tr>
-%end
-</table>
+    %try:
+    <form action='/DFS_input' method='post'>
+    <input type="number"  name="nodesNum" value={{vertices}} min=1 max=99 hidden/>
+    <b>Adjacency matrix (insert 0 or 1 in the cells):</b>
+        % include('make_table.tpl', title='make_table', vertices=vertices)
+    <b>Start from:</b><br/>
+    <input type="number"  name="start" min="1" max="{{vertices}}" placeholder="1 to {{vertices}}"/>
+    <input type="submit" class="button button" value="Calculate">
+    </form>
+        %except NameError:
+    %pass
+    %finally:
+    %pass
