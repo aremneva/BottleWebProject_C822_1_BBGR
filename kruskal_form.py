@@ -7,13 +7,12 @@ from datetime import datetime
 
 
 
-@post('/Prim', method='post')
-def prim_form():
-    return template('prim', rows=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm', year=datetime.now().year)
+@post('/Kruskal', method='post')
+def kruskal_form():
+    return template('kruskal', rows=int(request.forms.get('num')),title='Kruskal', message='Kruskal`s algorithm', year=datetime.now().year)
 
 @post('/Num', method='post')
-def prim_form():
-    
+def kruskal_form():
     rows=int(request.forms.get('num'))
     #если ячейка пустая, то 0
     mas = []
@@ -33,16 +32,16 @@ def prim_form():
                 mas[j][i] = 0
             finally:
                 pass
-    if os.stat('data/prim_data.txt').st_size !=0: 
-        with open('data/prim_data.txt', 'r') as file:
+    if os.stat('data/kruskal_data.txt').st_size !=0: 
+        with open('data/kruskal_data.txt', 'r') as file:
             solutions=json.load(file)
             id=len(solutions)
             file.close()
     else:
         id=0
     # тут будет алгоритм решения (поменять mas в output на массив с решением)
-    with open('data/prim_data.txt', 'w') as file:
-        solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input':mas, 'output':g}
+    with open('data/kruskal_data.txt', 'w') as file:
+        solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input':mas, 'output':mas}
         json.dump(solutions, file)
     file.close()
-    return template('prim_solution',id=id+1, rows=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm', year=datetime.now().year)
+    return template('kruskal_solution',id=id+1, rows=int(request.forms.get('num')),title='Kruskal', message='Kruskal`s algorithm', year=datetime.now().year)

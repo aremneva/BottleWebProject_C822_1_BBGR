@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="kruskal_form.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="prim_form.py">
       <SubType>Code</SubType>
     </Compile>
@@ -47,7 +50,11 @@
     <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\kruskal_data.txt" />
     <Content Include="data\prim_data.txt" />
+    <Content Include="views\kruskal_solution.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\make_result.tpl">
       <SubType>Code</SubType>
     </Content>

@@ -25,9 +25,24 @@
 <h3>Kruskal's vs Prim's Algorithm</h3>
 <p>Prim's algorithm is another popular minimum spanning tree algorithm that uses a different logic to find the MST of a graph. Instead of starting from an edge, Prim's algorithm starts from a vertex and keeps adding lowest-weight edges which aren't in the tree, until all vertices have been covered.</p>
 <h4>Enter the required values</h4>
-<p>number of graph vertices:</p>
-<input type ="number">
-<p>matrix of weight of branches:</p>
-<input type ="number">
-<p>Press the button</p>
-<input type ="button" value="calculate">
+<div class="junbotron">
+<form action='/Kruskal' method='post'>
+    %try:
+		<p><input type="Number"  name="num" value={{rows}}  min=1 max=99></input></p> 
+        %except NameError:
+        <p><input type="Number"  name="num" min=1 max=99></input></p> 
+        %finally:
+        <br>
+        <p> <input type="submit"  class="button button" value="Ok"></p>
+    </form>
+    %try:
+    <form action='/Num' method='post'>
+    <p><input type="Number"  name="num" value={{rows}} min=1 max=99 hidden></input></p> 
+        % include('make_weight.tpl', title='make_table', rows=rows)
+    <p> <input type="submit"  class="button button" value="Calculate"></p>
+    </form>
+        %except NameError:
+    %pass
+    %finally:
+    %pass
+    </div>
