@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="connectivity_check.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="prim_form.py">
       <SubType>Code</SubType>
     </Compile>

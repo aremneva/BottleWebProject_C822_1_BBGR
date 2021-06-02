@@ -12,4 +12,8 @@
     <b>Initial values:</b>
  % include('make_result.tpl', title='make_result', rows=vertices, mas=mas_input)
     <b>Result (starting from the vertex {{vertices}}):</b>
+    %if mas_output!=None:
  % include('make_result.tpl', title='make_result', rows=vertices, mas=mas_output)
+ %else:
+        <p>Solution for the given graph cannot be found since it is not connected.</p>
+ %end

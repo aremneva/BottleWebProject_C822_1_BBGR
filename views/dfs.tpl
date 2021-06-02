@@ -28,9 +28,9 @@
 <form action='/DFS' method="post">
 <b>Nodes amount:</b><br/>
     %try:
-   <input type="number" name="nodesNum" min="2" max="9" value={{vertices}} placeholder="2 to 9"/>
+   <input type="number" name="nodesNum" min="2" max="9" value={{vertices}} placeholder="2 to 9" required/>
    %except NameError:
-        <input type="number" name="nodesNum" min="2" max="9"  placeholder="2 to 9"/>
+        <input type="number" name="nodesNum" min="2" max="9"  placeholder="2 to 9" required/>
    %finally:
    <input type="submit" value="Confirm" class="btn btn-default"/>
   </form>
@@ -41,7 +41,7 @@
     <b>Adjacency matrix (insert 0 or 1 in the cells):</b>
         % include('make_table.tpl', title='make_table', vertices=vertices)
     <b>Start from:</b><br/>
-    <input type="number"  name="start" min="1" max="{{vertices}}" placeholder="1 to {{vertices}}"/>
+    <input type="number"  name="start" min="1" max="{{vertices}}" placeholder="1 to {{vertices}}" required/>
     <input type="submit" class="button button" value="Calculate">
     </form>
         %except NameError:
