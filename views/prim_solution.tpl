@@ -15,3 +15,5 @@
  % include('make_result.tpl', title='make_result', rows=rows, mas=mas_input_adjancency)
     <h2>Output</h2>
  % include('make_result.tpl', title='make_result', rows=rows, mas=mas_output)
+    <h2>Sum of edge weights</h2>
+    <p>Result: {{sum}}</p>

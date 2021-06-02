@@ -68,7 +68,7 @@ def prim_form():
     selected =[] 
     for i in range(rows):
         selected.append(False) #Выбранные вершины
-
+    sum=0  
     ver = 0 #Первая вершина
     selected[0] = True #Отмечаем первую вершину выбранной
     try:
@@ -82,7 +82,8 @@ def prim_form():
                                 min = mas_weight[i][j]
                                 x=i
                                 y=j
-            mas_result[x][y]= mas_result[y][x]=1
+            sum+=mas_weight[x][y]
+            mas_result[x][y]= mas_result[y][x]=mas_weight[x][y]
             selected[y] = True # Отмечаем, что вершина уже была выбрана
             ver += 1
     except:
@@ -92,5 +93,5 @@ def prim_form():
         solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input_weight':mas_weight,'input_adjancency':mas_adjancency, 'output':mas_result}
         json.dump(solutions, file)
     file.close()
-    return template('prim_solution',id=id+1, rows=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm', year=datetime.now().year)
+    return template('prim_solution',id=id+1, rows=int(request.forms.get('num')),title='Prim',sum=sum, message='Prim`s algorithm', year=datetime.now().year)
 
