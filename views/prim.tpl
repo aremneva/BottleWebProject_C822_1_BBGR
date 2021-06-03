@@ -22,16 +22,16 @@
 	<form action='/Prim' method='post'>
     <p>Number of graph vertices</p>
     %try:
-		<p><input type="Number"  name="num" value={{vertices}} placeholder="Num" min=1 max=99 required/></p> 
+		<p><input type="Number"  name="num" value={{vertices}} placeholder="Num" min=1 max=15 required/></p> 
         %except NameError:
-        <p><input type="Number"  name="num" value=5 placeholder="Num" min=1 max=99 required/></p> 
+        <p><input type="Number"  name="num" value=5 placeholder="Num" min=1 max=15 required/></p> 
         %finally:
         <br>
         <p> <input type="submit"  class="button button" value="Ok"></p>
     </form>
     %try:
     <form action='/Num' method='post'>
-    <p><input type="Number"  name="num" value={{vertices}} placeholder="Num" min=1 max=99 hidden></input></p>
+    <p><input type="Number"  name="num" value={{vertices}} placeholder="Num" min=1 max=15 hidden></input></p>
         % include('make_weight.tpl', title='make_table', rows=vertices)
     <p> <input type="submit"  class="button button" value="Calculate"></p>
     </form>

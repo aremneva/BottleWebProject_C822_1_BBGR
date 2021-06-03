@@ -45,15 +45,20 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="tests\test_prim_asymmetry.py">
+    <Compile Include="test_prim_asymmetry.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="tests\test_prim_symmetry.py">
+    <Compile Include="test_prim_false_sum.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_prim_symmetry.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_prim_true_sum.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="tests\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
