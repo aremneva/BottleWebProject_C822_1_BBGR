@@ -4,7 +4,7 @@ import pdb
 import json
 import os
 from datetime import datetime
-
+import connectivity_check
 
 
 @post('/Prim', method='post')
@@ -71,7 +71,10 @@ def prim_form():
     sum=0  
     ver = 0 #Первая вершина
     selected[0] = True #Отмечаем первую вершину выбранной
-    try:
+    check_result=connectivity_check.dfs_check(mas_adjancency) #Проверка на наличие связей между вершинами
+    if (check_result!=vertices):
+        mas_result=None
+    else:
         while (ver < vertices-1): # Пока не выбранные вершины еще есть
             min = 100 #Изначально минимальное число равно максимальному
             for i in range(vertices):
@@ -86,12 +89,12 @@ def prim_form():
             mas_result[x][y]= mas_result[y][x]=mas_weight[x][y]
             selected[y] = True # Отмечаем, что вершина уже была выбрана
             ver += 1
-    except:
-        return "Add links between vertexes"
 
     with open('data/prim_data.txt', 'w') as file:
-        solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input_weight':mas_weight,'input_adjancency':mas_adjancency, 'output':mas_result}
+        solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input_weight':mas_weight,'input_adjancency':mas_adjancency,  'output':mas_result, 'sum':sum}
         json.dump(solutions, file)
     file.close()
-    return template('prim_solution',id=id+1, vertices=int(request.forms.get('num')),title='Prim',sum=sum, message='Prim`s algorithm', year=datetime.now().year)
+    return template('prim_solution',id=id+1, vertices=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm',year=datetime.now().year)
+
+
 
