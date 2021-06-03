@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="data\dfs_data.txt" />
     <Content Include="data\prim_data.txt" />
+    <Content Include="static\content\styles.css" />
     <Content Include="views\dfs_solution.tpl" />
     <Content Include="views\make_result.tpl">
       <SubType>Code</SubType>
