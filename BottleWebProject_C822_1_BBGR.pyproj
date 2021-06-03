@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C822_1_BBGR</Name>
     <RootNamespace>BottleWebProject_C822_1_BBGR</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>8080</WebBrowserPort>
     <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
@@ -116,6 +116,15 @@
       <Id>env1</Id>
       <Version>3.7</Version>
       <Description>env1 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env2\">
+      <Id>env2</Id>
+      <Version>3.7</Version>
+      <Description>env2 (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
