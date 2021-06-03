@@ -18,8 +18,9 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C822_1_BBGR</Name>
     <RootNamespace>BottleWebProject_C822_1_BBGR</RootNamespace>
-    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
     <WebBrowserPort>8080</WebBrowserPort>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="prim_form.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
@@ -39,8 +43,16 @@
     <Folder Include="static\fonts\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
+    <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\prim_data.txt" />
+    <Content Include="views\make_result.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\make_weight.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -76,20 +88,17 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\layout.tpl" />
+    <Content Include="views\make_table.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\prim.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\prim_solution.tpl">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>env1</Id>
-      <Version>3.7</Version>
-      <Description>env1 (Python 3.7 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.8</Version>
@@ -99,6 +108,9 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
