@@ -148,3 +148,14 @@ input {
         left: 0;
         top: 0;
     }
+
+.image {
+    
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+}

@@ -12,7 +12,7 @@
 }
 
 input {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Merienda', cursive;
     color: black;
     font-size: 16px;
 }
@@ -40,7 +40,7 @@ h4 {
 
 td, tr {
     font-size: 20px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 p {
     font-family: 'Merriweather', serif;
@@ -123,6 +123,7 @@ input {
     line-height: 40px;
     border-width: 0;
     border-radius: 20px;
+    font-size: 26px;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -166,3 +167,42 @@ input {
         left: 0;
         top: 0;
     }
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    vertical-align: middle;
+    border-radius: 35px;
+}
+
+body {
+    background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 10px 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #21094e;
+    background: #a5e1ad;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+    .button:hover {
+        background: #511281;
+        box-shadow: 0 15px 20px #4ca1a3;
+        color: white;
+        transform: translateY(-7px);
+    }
+
