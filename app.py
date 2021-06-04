@@ -6,7 +6,11 @@ import bottle
 import os
 import sys
 import prim_form
+<<<<<<< HEAD
 import dfs_form
+=======
+import kruskal_form
+>>>>>>> 3663ee66e207ca69aa4b6ef66fabc22552c499e4
 
 # routes contains the HTTP handlers for our server and must be imported.
 import routes

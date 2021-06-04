@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C822_1_BBGR</Name>
     <RootNamespace>BottleWebProject_C822_1_BBGR</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>8080</WebBrowserPort>
     <IsWindowsApplication>False</IsWindowsApplication>
     <TestFramework>unittest</TestFramework>
@@ -35,7 +35,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+<<<<<<< HEAD
     <Compile Include="connectivity_check.py">
+=======
+    <Compile Include="kruskal_form.py">
+>>>>>>> 3663ee66e207ca69aa4b6ef66fabc22552c499e4
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="prim_form.py">
@@ -63,9 +67,17 @@
     <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="data\dfs_data.txt" />
     <Content Include="data\prim_data.txt" />
     <Content Include="views\dfs_solution.tpl" />
+=======
+    <Content Include="data\kruskal_data.txt" />
+    <Content Include="data\prim_data.txt" />
+    <Content Include="views\kruskal_solution.tpl">
+      <SubType>Code</SubType>
+    </Content>
+>>>>>>> 3663ee66e207ca69aa4b6ef66fabc22552c499e4
     <Content Include="views\make_result.tpl">
       <SubType>Code</SubType>
     </Content>
@@ -80,7 +92,11 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\img\alina.jpg" />
     <Content Include="static\img\KruskalDemo.gif" />
+    <Content Include="static\img\leda.jpg" />
+    <Content Include="static\img\nastya.jpg" />
+    <Content Include="static\img\olya.jpg" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
@@ -123,6 +139,15 @@
       <Id>env1</Id>
       <Version>3.7</Version>
       <Description>env1 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env2\">
+      <Id>env2</Id>
+      <Version>3.7</Version>
+      <Description>env2 (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

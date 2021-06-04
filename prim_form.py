@@ -90,8 +90,15 @@ def prim_form():
         return "Add links between vertexes"
 
     with open('data/prim_data.txt', 'w') as file:
+<<<<<<< HEAD
         solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input_weight':mas_weight,'input_adjancency':mas_adjancency, 'output':mas_result}
         json.dump(solutions, file)
     file.close()
     return template('prim_solution',id=id+1, vertices=int(request.forms.get('num')),title='Prim',sum=sum, message='Prim`s algorithm', year=datetime.now().year)
 
+=======
+        solutions[id+1]={'data':datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'input':mas, 'output':g}
+        json.dump(solutions, file)
+    file.close()
+    return template('prim_solution',id=id+1, rows=int(request.forms.get('num')),title='Prim', message='Prim`s algorithm', year=datetime.now().year)
+>>>>>>> 3663ee66e207ca69aa4b6ef66fabc22552c499e4
