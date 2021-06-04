@@ -11,7 +11,7 @@
      %if (mas[i][j]!=0):
     <td><input type="number" name="field{{i}}{{j}}" min="0" max="99" value={{mas[i][j]}} readonly></td>
     %else:
-    <td><input type="number" name="field{{i}}{{j}}" min="0" max="99" value={{mas[i][j]}}  style="background-color: #DADADA" readonly></td>
+    <td><input type="number" name="field{{i}}{{j}}" min="0" max="99" value={{mas[i][j]}}  style="background-color:  #97cdce" readonly></td>
     %end
     %end
     </tr>

@@ -10,33 +10,45 @@
     border-radius: 16px;
     font-family: 'Noto Sans', sans-serif;
 }
+
 input {
     font-family: 'Noto Sans', sans-serif;
     color: black;
     font-size: 16px;
 }
+h1,h2,h3,h4,h5 {
+    font-family: 'Merienda', cursive;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
 h1 {
-    font-family: 'Merienda', cursive ; 
-    font-size: 80px;
+    font-size: 92px;
 }
+
 h2 {
-    font-family: 'Merienda', cursive;
-    font-size: 60px;
+    font-size: 72px;
 }
+
 h3 {
-    font-family: 'Merienda', cursive;
-    font-size: 40px;
+    font-size: 52px;
 }
+
 h4 {
-    font-family: 'Merienda', cursive;
+    font-size: 42px;
+
+}
+
+td, tr {
     font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
 }
 p {
     font-family: 'Merriweather', serif;
-    font-size: 24px;
+    font-size: 30px;
 }
+
 .mainFont {
-    font-size: 10px;
+    font-size: 20px;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -44,35 +56,41 @@ a:link {
     background-color: transparent;
     text-decoration: none;
 }
+
 .main-color {
     background-color: #511281;
 }
+
 .mainDiv {
     background-color: #a5e1ad;
 }
+
 .jumbotron h1 {
     font-family: 'Merienda', cursive;
     font-size: 120px;
     color: #21094e;
 }
+
 .jumbotron p {
     font-family: 'Merriweather', serif;
-    font-size: 40px;
+    font-size: 32px;
     color: #21094e;
 }
+
 .jumbotron a {
     background-color: #511281;
     text-decoration: none;
     font-size: 25px;
-
 }
+
 .nav.navbar-nav li a {
     font-family: 'Merienda', cursive;
-    font-size: 10px;
+    font-size: 20px;
 }
+
 .color-me {
     font-family: 'Merienda', cursive;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .gradient-button {
@@ -91,8 +109,8 @@ a:link {
     }
 
 li {
-    font-size: 36px;
-    font-family: 'Merienda', cursive;
+    font-size: 32px;
+    font-family: 'Merriweather', serif;
 }
 
 
