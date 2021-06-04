@@ -62,6 +62,7 @@
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
+    <Folder Include="static\img\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
     <Folder Include="data\" />
@@ -69,6 +70,7 @@
   <ItemGroup>
     <Content Include="data\dfs_data.txt" />
     <Content Include="data\prim_data.txt" />
+    <Content Include="static\content\ourStyles.css" />
     <Content Include="static\content\styles.css" />
     <Content Include="views\dfs_solution.tpl" />
     <Content Include="views\make_result.tpl">
@@ -85,6 +87,7 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\img\KruskalDemo.gif" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
@@ -123,10 +126,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
+      <Version>3.7</Version>
+      <Description>env1 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
-      <Version>3.8</Version>
-      <Description>env (Python 3.8 (64-bit))</Description>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

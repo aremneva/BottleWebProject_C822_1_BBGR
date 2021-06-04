@@ -1,4 +1,4 @@
-#!C:\Users\Анастасия\Desktop\флешка\УП02\BottleWebProject_C822_1_BBGR\env\Scripts\python.exe
+#!V:\C822\григорьева оля\уп02\Новая папка\env\Scripts\python.exe
 # -*- coding: utf-8 -*-
 """
 Bottle is a fast and simple micro-framework for small web applications. It

@@ -21,4 +21,5 @@
     <p>Result: {{sum}}</p>
     %else:
         <p>Solution for the given graph cannot be found since it is not connected.</p>
+        <img class ="image" src="https://i.imgur.com/HqQAzc7.jpg" width=200 alt="sad cat">
  %end
