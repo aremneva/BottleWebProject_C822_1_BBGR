@@ -9,11 +9,12 @@
     %file.close()
 
            
-    <b>Initial values:</b>
+    <h2>Initial values</h2>
  % include('make_result.tpl', title='make_result', rows=vertices, mas=mas_input)
-    <b>Result (starting from the vertex {{vertices}}):</b>
+    <h2>Result (from the vertex {{vertices}})</h2>
     %if mas_output!=None:
  % include('make_result.tpl', title='make_result', rows=vertices, mas=mas_output)
  %else:
         <p>Solution for the given graph cannot be found since it is not connected.</p>
+        <img class ="image" src="https://i.imgur.com/HqQAzc7.jpg" width=200 alt="sad cat">
  %end
