@@ -72,6 +72,10 @@
     <Content Include="data\prim_data.txt" />
     <Content Include="static\content\ourStyles.css" />
     <Content Include="static\content\styles.css" />
+    <Content Include="static\img\alina.jpg" />
+    <Content Include="static\img\leda.jpg" />
+    <Content Include="static\img\nastya.jpg" />
+    <Content Include="static\img\olya.jpg" />
     <Content Include="views\dfs_solution.tpl" />
     <Content Include="views\make_result.tpl">
       <SubType>Code</SubType>
