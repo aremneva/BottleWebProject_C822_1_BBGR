@@ -39,39 +39,39 @@ def kruskal_form():
             file.close()
     else:
         id=0
-        # тут будет алгоритм решения (поменять mas в output на массив с решением)
-        # Sorting input edges by weight
+        # тут будет алгоритм решения
+        # сортировка ребер по весу
     edges = sorted(mas, key=lambda item: item[2])
-    # Adding first edge (with smallest weight) to result list and deleting it from input edges.
+    # добавление 1 ребра (с самым маленьким весом) чтобы получить список результатов и удалить его из входных ребер
     result = [edges.pop(0)]
-    # Adding to array first set of expanded points.
+    # добавление в массив первого набора развернутых точек
     array = [{result[0][0], result[0][1]}]
     
-    # For each edge in sorted list (without deleted first)
+    # для каждого ребра в отсортированном списке (без удаления первого)
     for edge in edges:
-        # Looking for start point occurrences in expanded points sets and trying to get set index.
+        # поиск вхождений начальной точки в расширенных наборах точек и попытка получить индекс набора
         start_connection = next(iter([i for i in range(len(array)) if edge[0] in array[i]]), None)
-        # Looking for end point occurrences in expanded points sets and trying to get set index.
+        # поиск вхождений конечных точек в расширенных наборах точек и попытка получить индекс набора
         end_connection = next(iter([i for i in range(len(array)) if edge[1] in array[i]]), None)
     
-        # If edge makes cycle - skip it.
+        # если ребро делает цикл - пропустите его
         if start_connection is not None and start_connection == end_connection:
             continue
     
-        # Adding edge to result list.
+        # добавление ребра в список результатов
         result.append(edge)
-        # If edge first point found in expanded points set - add second edge point.
+        # если первая точка ребра найдена в расширенном наборе точек - добавьте вторую точку ребра
         if start_connection is not None:
             array[start_connection].add(edge[1])
-        # If edge second point found in expanded points set - add first edge point.
+        # если вторая точка ребра найдена в расширенном наборе точек - добавьте первую точку ребра
         if end_connection is not None:
             array[end_connection].add(edge[0])
     
-        # If edge is not connected with any chains - add new set of expanded points. (new chain)
+        # если ребро не связано ни с какими цепочками - добавьте новый набор развернутых точек. (новая цепочка)
         if start_connection is None and end_connection is None:
             array.append({edge[0], edge[1]})
     
-        # If edge connects two chains - merge these chains. (union from two expanded points sets)
+        # если ребро соединяет две цепочки - объедините эти цепочки. (объединение из двух расширенных наборов точек)
         if start_connection is not None and end_connection is not None:
             array.append(array[start_connection].union(array[end_connection]))
             array = [array[i] for i in range(len(array)) if i != start_connection and i != end_connection]

@@ -1,11 +1,11 @@
 % rebase('layout.tpl', title='Home Page', year=year)
 
-<h2>{{ title }}</h2>
-<h3>{{ message }}</h3>
+<h1>{{ title }}</h1>
+<h2>{{ message }}</h2>
 
 <p>Depth first Search or Depth first traversal is a recursive algorithm for searching all the vertices of a graph or tree data structure. Traversal means visiting all the nodes of a graph.</p>
 
-<h4>The Algorithm </h4>
+<h3>The Algorithm </h3>
 
 <p>A standard DFS implementation puts each vertex of the graph into one of two categories:</p>
 <ol>
@@ -24,7 +24,7 @@
 
 <!-- mine -->
 
-<h4>Find a Spanning Tree</h4>
+<h3>Find a Spanning Tree</h3>
 <form action='/DFS' method="post">
 <b>Nodes amount:</b><br/>
     %try:
@@ -32,7 +32,7 @@
    %except NameError:
         <input type="number" name="nodesNum" min="2" max="9"  placeholder="2 to 9" required/>
    %finally:
-   <input type="submit" value="Confirm" class="btn btn-default"/>
+   <input type="submit" value="Confirm" class="button"/>
   </form>
 
     %try:

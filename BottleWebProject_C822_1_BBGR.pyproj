@@ -18,9 +18,12 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C822_1_BBGR</Name>
     <RootNamespace>BottleWebProject_C822_1_BBGR</RootNamespace>
-    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
     <WebBrowserPort>8080</WebBrowserPort>
     <IsWindowsApplication>False</IsWindowsApplication>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,13 +35,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
-    <Compile Include="kruskal_form.py">
+    <Compile Include="connectivity_check.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="prim_form.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="dfs_form.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="test_prim_asymmetry.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_prim_false_sum.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_prim_symmetry.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_prim_true_sum.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -50,11 +68,11 @@
     <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\kruskal_data.txt" />
+    <Content Include="data\dfs_data.txt" />
     <Content Include="data\prim_data.txt" />
-    <Content Include="views\kruskal_solution.tpl">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="static\content\ourStyles.css" />
+    <Content Include="static\content\styles.css" />
+    <Content Include="views\dfs_solution.tpl" />
     <Content Include="views\make_result.tpl">
       <SubType>Code</SubType>
     </Content>
@@ -69,11 +87,7 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="static\img\alina.jpg" />
     <Content Include="static\img\KruskalDemo.gif" />
-    <Content Include="static\img\leda.jpg" />
-    <Content Include="static\img\nastya.jpg" />
-    <Content Include="static\img\olya.jpg" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
@@ -116,15 +130,6 @@
       <Id>env1</Id>
       <Version>3.7</Version>
       <Description>env1 (Python 3.7 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
-    <Interpreter Include="env2\">
-      <Id>env2</Id>
-      <Version>3.7</Version>
-      <Description>env2 (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

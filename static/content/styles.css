@@ -1,0 +1,161 @@
+.button {
+    background-color: #a5e1ad;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 16px;
+    font-family: 'Noto Sans', sans-serif;
+}
+input {
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+h1 {
+    font-family: 'Merienda', cursive ; 
+    font-size: 80px;
+}
+h2 {
+    font-family: 'Merienda', cursive;
+    font-size: 60px;
+}
+h3 {
+    font-family: 'Merienda', cursive;
+    font-size: 40px;
+}
+h4 {
+    font-family: 'Merienda', cursive;
+    font-size: 20px;
+}
+p {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+}
+.mainFont {
+    font-size: 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a:link {
+    background-color: transparent;
+    text-decoration: none;
+}
+.main-color {
+    background-color: #511281;
+}
+.mainDiv {
+    background-color: #a5e1ad;
+}
+.jumbotron h1 {
+    font-family: 'Merienda', cursive;
+    font-size: 120px;
+    color: #21094e;
+}
+.jumbotron p {
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    color: #21094e;
+}
+.jumbotron a {
+    background-color: #511281;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+.nav.navbar-nav li a {
+    font-family: 'Merienda', cursive;
+    font-size: 10px;
+}
+.color-me {
+    font-family: 'Merienda', cursive;
+    font-size: 10px;
+}
+
+.gradient-button {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #4ca1a3 0%, #511281 51%, #21094e 100%);
+    background-size: 200% auto;
+    transition: .5s;
+    border: none;
+}
+
+    .gradient-button:hover {
+        background-position: right center;
+    }
+
+li {
+    font-size: 36px;
+    font-family: 'Merienda', cursive;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.double-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 3px;
+    color: #511281;
+    text-shadow: -2px -1px #21094e;
+    background: #a5e1ad;
+    transition: .3s;
+}
+
+    .double-btn:hover {
+        text-shadow: none;
+    }
+
+    .double-btn:after {
+        content: "";
+        position: absolute;
+        height: 105%;
+        width: 105%;
+        z-index: -1;
+        left: -4px;
+        top: -1px;
+        background: white;
+        transform: skewY(2deg);
+        transition: .3s;
+    }
+
+    .double-btn:hover:after {
+        transform: none;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+.image {
+    
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+}
