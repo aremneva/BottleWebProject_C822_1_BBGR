@@ -16,40 +16,34 @@
 </ol>
 <p>Note: dividing vertices into expanded and not expanded is necessary for an arbitrary graph (since it may contain cycles). For a tree, this operation is not needed, since each vertex will be selected only once.</p>
 <img src=https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif >
-<p>Number of vertices in the graph</p>
-<input type="number" size="1">
-<p></p>
-<p>Vertex adjacency matrix</p>
 
-<p>Vertex - start of traversal</p>
-<input type="text" size="5">
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<input type="button" value="Calculate">
 
 <div class="junbotron">
 
 	<h3>  BFS </h3>
-	<form action='/BFS' method='post'>
+	<form action='/BFS' method="post">
+<b>Nodes amount:</b><br/>
     %try:
-		<p><input type="Number"  name="num" value={{rows}} placeholder="Number of graph vertices" min=1 max=99></input></p> 
-        %except NameError:
-        <p><input type="Number"  name="num" placeholder="Number of graph vertices" min=1 max=99></input></p> 
-        %finally:
-        <br>
-        <p> <input type="submit"  class="button button" value="Ok"></p>
-    </form>
+   <input type="number" name="num" min="2" max="9" value={{vertices}} placeholder="2 to 9" required/>
+   %except NameError:
+        <input type="number" name="num" min="2" max="9"  placeholder="2 to 9" required/>
+   %finally:
+   <input type="submit" value="Confirm" class="btn btn-default"/>
+  </form>
+
     %try:
-    <form action='/Num' method='post'>
-    <p><input type="Number"  name="num" value={{rows}} placeholder="Number of graph vertices" min=1 max=99 hidden></input></p> 
-        % include('make_table.tpl', title='make_table', rows=rows)
-    <p> <input type="submit"  class="button button" value="Calculate"></p>
+    <form action='/conn' method='post'>
+    <input type="number"  name="num" value={{vertices}} min=1 max=99 hidden/>
+    <b>Adjacency matrix (insert 0 or 1 in the cells):</b>
+        % include('make_table.tpl', title='make_table', vertices=vertices)
+    <b>Start from:</b><br/>
+    <input type="number"  name="start" min="1" max="{{vertices}}" placeholder="1 to {{vertices}}" required/>
+    <input type="submit" class="button button" value="Calculate">
     </form>
         %except NameError:
     %pass
     %finally:
+    %pass
 
 </div>
 

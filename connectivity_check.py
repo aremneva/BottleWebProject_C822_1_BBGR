@@ -1,4 +1,4 @@
-def dfs_check(mas, start=0, visited=None, recursive=False):
+def bfs_check(mas, start=0, visited=None, recursive=False):
     
     graph={}
     for i in range(len(mas)):
@@ -12,9 +12,9 @@ def dfs_check(mas, start=0, visited=None, recursive=False):
         visited = set()
     visited.add(start)
 
-    for next in graph[start] - visited:
-        if next not in visited:
-            dfs_check(mas, next, visited, True)
+    for neighbour in graph[start] - visited:
+        if neighbour not in visited:
+            bfs_check(mas, neighbour, visited, True)
    
     if recursive:
         return visited 
